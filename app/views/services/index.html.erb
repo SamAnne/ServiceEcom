@@ -6,4 +6,22 @@
   </div>
   <div class="bg-">
   </div>
+
+
+  <div class="flex text-black my-5 mx-auto rounded-xl space-x-4">
+    <% packages = [
+      ['Basic Package', 'Ideal for everyday users, the Basic Package covers essential services like virus removal, basic tune-ups, and operating system troubleshooting. Perfect for getting your device back to smooth operation.'],
+      ['Advanced Package', 'Great for users experiencing more serious issues. This package includes everything in Basic, plus advanced diagnostics, hardware repair (e.g., screen or keyboard replacement), and data recovery options.'],
+      ['Ultimate Package', 'Our most comprehensive repair solution. Includes all services from Basic and Advanced, plus deep system optimization, full system rebuilds, custom upgrade recommendations, and premium turnaround time.'],
+    ] %>
+    
+    <% packages.each do |title, description| %>
+        <div class="shadow-xl bg-[#f6f6f6] p-4 rounded-xl">
+          <h1 class="text-2xl"><%= title %></h1>
+          <p class="text-black/80"><%= description %></p>
+        </div>
+    <% end %>
+  </div>
 </div>
+
+
