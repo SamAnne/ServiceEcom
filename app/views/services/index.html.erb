@@ -1,27 +1,43 @@
-<div class="bg-no-repeat bg-linear-to-t from-[#f6f6f6] to-black bg-cover bg-center h-screen relative w-screen mt-15 py-25 flex flex-col text-center font-mono font-light" >
+<div class="bg-no-repeat bg-black bg-cover bg-center h-screen mt-15 py-25 flex flex-col text-center font-mono font-light" >
   <div class=" max-w-xl text-white mx-auto space-y-4">
-    <h1 class="text-4xl">Computers repairs</h1>
-    <p class="text-white/80">Bringing our tech expertise easily to your home. Book an appointment today to get your computer running like new again.</p>
+    <h1 class="font-bold text-4xl">Website Developing</h1>
+    <p class="text-white/80">Bringing our tech expertise easily to your business. Book an appointment today to get your website running like a professional.</p>
     <button class="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-neutral-200 font-medium text-neutral-950 transition-all duration-300 hover:w-40"><div class="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">Our Services</div><div class="absolute right-3.5"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
   </div>
-  <div class="bg-">
+  
+  <%= image_tag("com.jpg", {:style => "overflow-hidden h-screen w-svh mx-auto bg-center bg-contain"}) %>
+</div>
+
+
+<div class="bg-black font-mono">
+  <div class="flex items-center flex-col  text-center ">
+    <span class="text-[#f6f6f6] font-bold text-3xl">Our Services</span>
+    <p class="text-[#f6f6f6]/80 p-5 font-light w-1/2 text-sm/4">We offer tailored web solutions designed to meet the needs of <span class="text-[#3859a7]/80 font-semibold">individuals</span>, <span class="text-[#64214c]/80 font-semibold">startups</span>, and growing <span class="text-[#dd2700]/80 font-semibold">businesses</span>. Whether you need a simple online presence or a fully functional web platform, we build with performance, design, and user experience in mind. Explore our service packages below to find the right fit for your goals.</p>
   </div>
-
-
-  <div class="flex text-black my-5 mx-auto rounded-xl space-x-4">
+  
+  <div class="flex justify-center-safe my-5 mx-auto rounded-xl space-x-4">
     <% packages = [
-      ['Basic Package', 'Ideal for everyday users, the Basic Package covers essential services like virus removal, basic tune-ups, and operating system troubleshooting. Perfect for getting your device back to smooth operation.'],
-      ['Advanced Package', 'Great for users experiencing more serious issues. This package includes everything in Basic, plus advanced diagnostics, hardware repair (e.g., screen or keyboard replacement), and data recovery options.'],
-      ['Ultimate Package', 'Our most comprehensive repair solution. Includes all services from Basic and Advanced, plus deep system optimization, full system rebuilds, custom upgrade recommendations, and premium turnaround time.'],
+      ['Static Package', 'Perfect for small businesses, personal brands, or landing pages, this package offers a fast, secure, and beautifully designed website without the need for ongoing backend development or databases.', '<li>Up to 5 custom designed pages</li><li>Deployed to your domain with free hosting support</li>'.html_safe],
+      ['Dynamic Package', 'Designed for businesses and creators who need more than just static content. This package includes a fully functional website with dynamic features powered by a backend.', '<li>Deployed to your domain with free hosting</li><li>Admin dashboard</li><li>Database Integration</li><li>User login system</li>'.html_safe],
     ] %>
     
-    <% packages.each do |title, description| %>
-        <div class="shadow-xl bg-[#f6f6f6] p-4 rounded-xl">
-          <h1 class="text-2xl"><%= title %></h1>
-          <p class="text-black/80"><%= description %></p>
+    <% packages.each do |title, description, list| %>
+        <div class="basis-md bg-black text-[#f6f6f6] p-4 rounded-xl text-center">
+          <h1 class="text-2xl p-2"><%= title %></h1>
+          <hr class="h-px my-5 bg-[#f6f6f6] border-0 dark:bg-[#f6f6f6]-700"/>
+          <p class="text-[#f6f6f6]/80"><%= description %></p>
+          <h2 class="text-xl p-2">Benefits</h2>
+          <ul class="list-disc text-left pl-5 text-[#f6f6f6]/80 border-none">
+            <%= list %>
+          </ul>
         </div>
     <% end %>
   </div>
+  <div>
+      
+  </div>
 </div>
+
+
 
 
