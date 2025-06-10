@@ -1,7 +1,7 @@
-<div class="bg-no-repeat bg-black bg-cover bg-center h-screen mt-15 py-25 flex flex-col text-center font-mono font-light" >
+<div class="brightness-125 bg-no-repeat bg-black bg-cover bg-center h-screen mt-15 pt-25 flex flex-col text-center font-mono font-light" >
   <div class=" max-w-xl text-white mx-auto space-y-4">
     <h1 class="font-bold text-4xl">Website Developing</h1>
-    <p class="text-white/80">Bringing our tech expertise easily to your business. Book an appointment today to get your website running like a professional.</p>
+    <p class="text-white/80">Bringing our tech expertise easily to your business. Book an <span class="text-[#3859a7]">appointment</span> today to build a website that moves, reacts, and impresses.</p>
     <button class="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-neutral-200 font-medium text-neutral-950 transition-all duration-300 hover:w-40"><div class="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">Our Services</div><div class="absolute right-3.5"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
   </div>
   
@@ -9,23 +9,74 @@
 </div>
 
 
-<div class="bg-black font-mono">
+<div class="bg-gradient-to-b from-black to-[#000c73] from-25% font-mono brightness-125">
+  <div class="text-center text-[#f6f6f6]">
+    <h1 class="text-4xl font-bold pt-60">Know What's Going On With Your Website</h1>
+    <p class="text-[#f6f6f6]/80 text-xl pb-80">Your designs. Your look. No templates.</p>
+  </div>
+
+
+
   <div class="flex items-center flex-col  text-center ">
     <span class="text-[#f6f6f6] font-bold text-3xl">Our Services</span>
-    <p class="text-[#f6f6f6]/80 p-5 font-light w-1/2 text-sm/4">We offer tailored web solutions designed to meet the needs of <span class="text-[#3859a7]/80 font-semibold">individuals</span>, <span class="text-[#64214c]/80 font-semibold">startups</span>, and growing <span class="text-[#dd2700]/80 font-semibold">businesses</span>. Whether you need a simple online presence or a fully functional web platform, we build with performance, design, and user experience in mind. Explore our service packages below to find the right fit for your goals.</p>
+    <p class="text-[#f6f6f6]/80 p-5 font-light w-4/6 text-sm/4">We offer tailored web solutions designed to meet the needs of <span class="text-[#3859a7]/80 font-semibold">individuals</span>, <span class="text-[#64214c]/80 font-semibold">startups</span>, and growing <span class="text-[#dd2700]/80 font-semibold">businesses</span>. Whether you need a simple online presence or a fully functional web platform, we build with performance, design, and user experience in mind. Explore our service packages below to find the right fit for your goals.</p>
+  </div>
+
+  <div class="relative flex overflow-x-hidden w-4/6 mx-auto">
+
+    <div class="py-12 animate-marquee whitespace-nowrap">
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'tailwind.png', alt: 'Tailwind', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'rails.png', alt: 'Rails', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'css.png', alt: 'CSS', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'html.png', alt: 'HTML', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'js.png', alt: 'JS', class: 'w-20 inline' %>
+      </span>
+      
+    </div>
+
+    <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'tailwind.png', alt: 'Tailwind', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'rails.png', alt: 'Rails', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'css.png', alt: 'CSS', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'html.png', alt: 'HTML', class: 'w-20 inline' %>
+      </span>
+      <span class="mx-4 text-4xl">
+        <%= image_tag 'js.png', alt: 'JS', class: 'w-20 inline' %>
+      </span>
+      
+    </div>
   </div>
   
-  <div class="flex justify-center-safe my-5 mx-auto rounded-xl space-x-4">
+  
+
+
+  <div class="flex text-black justify-center-safe my-5 mx-auto rounded-xl space-x-4">
     <% packages = [
       ['Static Package', 'Perfect for small businesses, personal brands, or landing pages, this package offers a fast, secure, and beautifully designed website without the need for ongoing backend development or databases.', '<li>Up to 5 custom designed pages</li><li>Deployed to your domain with free hosting support</li>'.html_safe],
       ['Dynamic Package', 'Designed for businesses and creators who need more than just static content. This package includes a fully functional website with dynamic features powered by a backend.', '<li>Deployed to your domain with free hosting</li><li>Admin dashboard</li><li>Database Integration</li><li>User login system</li>'.html_safe],
     ] %>
     
     <% packages.each do |title, description, list| %>
-        <div class="basis-md bg-black text-[#f6f6f6] p-4 rounded-xl text-center">
+        <div class="basis-md p-4 border-2 border-white bg-black-900 rounded-xl text-center text-[#f6f6f6] shadow-lg">
           <h1 class="text-2xl p-2"><%= title %></h1>
-          <hr class="h-px my-5 bg-[#f6f6f6] border-0 dark:bg-[#f6f6f6]-700"/>
-          <p class="text-[#f6f6f6]/80"><%= description %></p>
+          <hr class="h-px my-5 bg-white border-0 dark:bg-[#f6f6f6]-700"/>
+          <p class="text-black-800"><%= description %></p>
           <h2 class="text-xl p-2">Benefits</h2>
           <ul class="list-disc text-left pl-5 text-[#f6f6f6]/80 border-none">
             <%= list %>
@@ -33,9 +84,7 @@
         </div>
     <% end %>
   </div>
-  <div>
-      
-  </div>
+  
 </div>
 
 
