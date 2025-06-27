@@ -1,13 +1,20 @@
-<div class="flex-row absolute inset-0 h-fit bg-black">
+<div id="home" class="flex-row absolute inset-0 h-fit bg-black">
     <nav class="font-mono font-light p-4 text-lg space-x-6 text-white">
         <span>
-            <button role="link" class="relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100">Home</button>
+            <%= link_to "Home", root_path(anchor: 'home'), class: "relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100" %>
         </span>
         <span>
-            <button role="link" class="relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100">Services</button>
+            <%= link_to "Services", root_path(anchor: 'services'), class: "relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100" %>
         </span>
         <span>
-            <button role="link" class="relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100">Contact Us</button>
+            <%= link_to "Contact Us", root_path(anchor: 'contact'), class: "relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100" %>
+        </span>
+        <span class="float-right bg-white text-black px-5 rounded-xl font-medium hover:bg-gray-300">
+            <% if user_signed_in? %>
+                <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
+            <% else %>
+                <%= link_to "Login/Sign up", new_user_session_path %>
+            <% end %>
         </span>
     </nav>
 </div>

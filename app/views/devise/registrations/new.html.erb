@@ -1,0 +1,36 @@
+<div class="flex flex-col text-lg items-center bg-black font-mono font-light h-screen -mt-15 justify-center">
+  <h2 class="text-3xl text-[#f6f6f6] pt-5">Welcome</h2>
+  <p class="text-[#f6f6f6]/70 text-sm">Sign up to have access to your website!</p>
+
+  <%= form_for(resource, html: { class:"space-y-4 bg-black-500 text-[#f6f6f6] p-15 pt-8 rounded-xl shadow-lg" }, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email Address", class:"shadow w-full border rounded focus:outline-none focus:shadow-outline p-2" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class:"shadow border w-full rounded focus:outline-none focus:shadow-outline p-2" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class:"shadow border w-full rounded focus:outline-none focus:shadow-outline p-2" %>
+    </div>
+
+    <div class="actions text-center text-xl p-5">
+      <%= f.submit "Sign up", :class => "bg-[#3859a7] px-10 p-2 rounded-2xl hover:bg-[#3859a7]/70 text-[#f6f6f6]" %>
+    </div>
+
+    <div class="text-center">
+      <%= render "devise/shared/links" %>
+    </div>
+  <% end %>
+
+  
+</div>
